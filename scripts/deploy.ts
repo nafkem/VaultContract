@@ -4,11 +4,11 @@ async function main() {
   // const Token = await ethers.getContractFactory("CVIII");
   // const token = await Token.deploy("web3Bridge", "VIII");
   // await token.deployed();
-  const Vault  = await ethers.deployContract("Vault"); 
-  await Vault .waitForDeployment();
+  const MarketPlace = await ethers.deployContract("MarketPlace",["name" ,"symbol"]); 
+  await MarketPlace.waitForDeployment();
   
   console.log(
-    `Vault  contract deployed to ${Vault .target}`
+    `MarketPlace contract deployed to ${MarketPlace.target}`
   );
 }
 
